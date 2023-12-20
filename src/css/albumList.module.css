@@ -1,0 +1,125 @@
+.loader {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .top h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  
+  .top button {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: rgb(0, 119, 255);
+    background-color: rgba(0, 119, 255, 0.1);
+    border: 2px solid rgb(0, 119, 255);
+    cursor: pointer;
+  }
+
+  .top .active {
+    color: rgb(255, 19, 0);
+    background-color: rgba(255, 19, 0, 0.1);
+    border: 2px solid rgb(255, 19, 0);
+  }
+  
+  .albumsList {
+    display: grid;
+    grid-template: repeat(1, 150px) / repeat(auto-fit, minmax(150px, 0.5fr));
+    grid-auto-flow: row;
+    grid-auto-rows: 150px;
+    gap: 30px;
+    margin-bottom: 100px;
+    /* border: 1px solid red; */
+  }
+  
+  .album {
+    width: 90%;
+    height: 100%;
+    border: 5px solid #eeeeee;
+    margin-block: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: border-color 0.3s;
+  }
+  
+  .album span {
+    justify-self: baseline;
+    width: 100%;
+    text-align: center;
+    padding-block: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #eeeeee;
+    transition: 0.3s;
+  }
+  
+  
+  .album:hover {
+    border-color: #0077ff;
+    color: #fff;
+  }
+  .album:hover span {
+    background-color: #0077ff;
+  }
+  
+
+/* delete */
+.delete,
+  .update {
+    outline: none;
+    border: none;
+    width: fit-content;
+    transition: 0.3s;
+    align-self:flex-end;
+    /* border: 1px solid red; */
+    padding:0;
+    margin: 0;
+    display: none;
+    z-index: 10;
+  }
+
+  .delete.active,
+  .update.active {
+    display: block;
+  }
+  
+.delete img{
+    width: 40px;
+    margin-left: 10px;
+}
+.update img{
+    width: 40px;
+    background-color: #fff;
+}
+.album .images{
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.icon{
+    /* background-color: #fff; */
+    align-self: flex-end;
+    width: 50px;
+    display: flex;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    /* border: 2px solid green; */
+}
